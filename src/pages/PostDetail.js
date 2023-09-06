@@ -24,7 +24,10 @@ const PostDetail = () => {
         <div className="flex flex-col items-center gap-8 border-4 border-gray-500 rounded-lg w-1/2 m-10 py-10 bg-gray-100 drop-shadow-2xl">
           <p className="block mb-2 text-2xl font-bold text-gray-500">{post.videoTitle}</p>
           <p className="block mb-2 text-lg text-gray-500">{post.creatorName}</p>
-          <ReactPlayer url={post.videoUrl} />
+          <div className="w-full aspect-video py-10 px-20">
+            <ReactPlayer url={post.videoUrl} width="100%" />
+          </div>
+
           <div className="flex flex-col items-end w-full p-10">
             <p>{post.comment}</p>
             <Rating name="no-value" value={post.rating} readOnly />

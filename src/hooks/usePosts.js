@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { host } from '../constant/host'
 
 const usePosts = () => {
-  const [posts, setPosts] = useState(null)
+  const [posts, setPosts] = useState([])
   const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
